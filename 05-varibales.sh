@@ -6,3 +6,8 @@ read -s USERNAME #ntered above will be automatically attached to the variable US
 
 
 echo "Username is: $USERNAME"
+
+echo "Please enter password"
+read -s PASSWORD #ntered above will be automatically attached to the variable PASSWORD
+
+echo "Password is: $PASSWORD"
