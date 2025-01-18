@@ -21,11 +21,11 @@ else
     echo "Installing git is success"
 fi
 
-yum instal git -y
+yum install git -y
 
 if [ $? -ne 0 ]
 then 
-    echo "Error:: istalling git is failed"
+    echo "Error:: Intalling Git is failed"
 else
     echo "erro:: Installing Git is success"
 fi
