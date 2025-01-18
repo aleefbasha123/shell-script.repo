@@ -5,12 +5,12 @@ ID=$(id -u)
 VALIDATE(){
     ID=$(id -u)
 
-  if  [ $ID -ne 0 ]
+  if  [ $1 -ne 0 ]
   then
-        echo "ERROR:: Please run this script with root access"
+        echo "ERROR:: $1..........failed"
 
   else
-      echo "you are root user"
+      echo "$2-------------- Success"
   fi
 }
 
@@ -24,8 +24,8 @@ fi
 
 yum install mysql -y
 
-VALIDATE
+VALIDATE $? "Installing mysql"
 
 yum install git -y
 
-VALIDATE
+VALIDATE $? "Installing Git"
