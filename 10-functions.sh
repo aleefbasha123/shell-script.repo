@@ -10,7 +10,7 @@ VALIDATE(){
         echo "ERROR:: $1..........failed"
 
   else
-      echo "$2-------------- Success"
+      echo "$2-------------- Installaton Success"
   fi
 }
 
