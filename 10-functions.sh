@@ -22,10 +22,10 @@ else
     echo "you are root user"
 fi
 
-yum install mysqll -y
+yum install mysql -y
 
 VALIDATE $? "Installing mysql"
 
-yum install gits -y
+yum install git -y
 
 VALIDATE $? "Installing Git"
