@@ -21,7 +21,7 @@ else
     echo "Installing git is success"
 fi
 
-yum install git -y
+yum install gitt -y
 
 if [ $? -ne 0 ]
 then 
