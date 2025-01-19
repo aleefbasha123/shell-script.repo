@@ -3,6 +3,7 @@
 ID=$(id -u)
 TIMESTAMP=$(date +F-%H-%M-%S)
 LOGFILE="/temp/$0-$TIMESTAMP.log"
+echo "script strated execting at "$TIMESTAMP" &>> $LOGFILE
 
 
 VALIDATE(){
