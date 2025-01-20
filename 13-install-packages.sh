@@ -10,3 +10,4 @@ else
     echo "you are in root user"
 fi #fi means reverse of if, including condtion end.
 
+echo "All the arguments passed:$@"
