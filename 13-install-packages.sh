@@ -9,7 +9,7 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "script started    exceduing at $TIMESTAMP"
+echo "script started    exceduing at $TIMESTAMP" &>> $LOGFILE
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
@@ -35,10 +35,10 @@ fi #fi means reverse of if, including condtion end.
 
 for package in $@
 do
-  yun list installed $pacakge #check installed or not
+  yun list installed $pacakge &>> $LOGFILE #check installed or not
   if [ $? -ne 0 ] #if not installed
   then
-      yum install $package -y #install the package
+      yum install $package -y &>> $LOGFILE #install the package
       VALIDATE $? "Installing of $package" #validate
       else
           echo -e "$package is already installed ... $Y SKIPPING $N"
